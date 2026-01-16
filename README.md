@@ -6,7 +6,7 @@ Reproduction for [Renovate discussion 40421](https://github.com/renovatebot/reno
 
 ## Current behavior
 
-Updates to `node` and `npm` are separately created, and one is opened for `npm` for every version published
+Updates to `node` and `npm` are separately created, and `npm` is updated to the latest version published.
 
 ### Results
 
