@@ -17,10 +17,6 @@ Updates to `node` and `npm` are separately created, and one is opened for `npm` 
 
 Restrict the version of `npm` to the version installed by the `nvm` images
 
-# Desired
+### Desired
 - node: 24.13.0
 - npm: 11.16.2
-
-## Link to the Renovate issue or Discussion
-
-
