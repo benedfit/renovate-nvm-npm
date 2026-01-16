@@ -1,0 +1,4 @@
+{
+  "name": "renovate-nvm-npm",
+  "packageManager": "npm@11.6.2",
+}
