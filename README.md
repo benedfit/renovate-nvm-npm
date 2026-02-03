@@ -19,4 +19,4 @@ Restrict the version of `npm` to the version installed by the `nvm` images
 
 ### Desired
 - `node`: `24.13.0`
-- `npm`: `11.16.2`
+- `npm`: `11.6.2`
