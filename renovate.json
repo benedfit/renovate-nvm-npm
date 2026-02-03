@@ -1,4 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"]
+  "extends": ["config:recommended"],
+  "customDatasources": {
+    "node-npm-version":{
+      "defaultRegistryUrlTemplate": "https://nodejs.org/download/release/index.json",
+      "format": "json",
+      "transformTemplates": ["{ \"releases\": $each(${npm:$^(lts != false ? 0 : 1, >date)[0]}, function($v) { { \"version\": $v.npm, \"releaseTimestamp\": $v.date, \"isStable\": $v.lts != false } }) }"]
+    }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["npm"],
+      "overrideDatasource": "custom.node-npm-version"
+    }
+  ]
 }
