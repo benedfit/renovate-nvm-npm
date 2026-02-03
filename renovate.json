@@ -3,7 +3,7 @@
   "extends": ["config:recommended"],
   "customDatasources": {
     "node-npm-version":{
-      "defaultRegistryUrlTemplate": "https://nodejs.org/download/release/index.json",
+      "defaultRegistryUrlTemplate": "https://nodejs.org/dist/index.json",
       "format": "json",
       "transformTemplates": ["{ \"releases\": $each(${npm:$^(lts != false ? 0 : 1, >date)[0]}, function($v) { { \"version\": $v.npm, \"releaseTimestamp\": $v.date, \"isStable\": $v.lts != false } }) }"]
     }
